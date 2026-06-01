@@ -1,9 +1,16 @@
 /*
- * Simulacro 3: estadísticas por thread.
+ * Simulacro 3 - Estadísticas por thread.
  *
- * Extensión evaluada:
- * cada productor, cocinero y repartidor mantiene estadísticas propias.
- * Los contadores compartidos se actualizan bajo mutex y se imprimen al final.
+ * Enunciado del simulacro:
+ * al finalizar, el sistema debe mostrar cuántos pedidos procesó cada productor,
+ * cada cocinero y cada repartidor, además del promedio de preparación.
+ *
+ * Modificación requerida:
+ * agregar contadores por thread y actualizar esos datos bajo mutex para evitar
+ * race conditions en las estadísticas globales.
+ *
+ * Concepto evaluado:
+ * protección de estado compartido y lectura consistente de resultados finales.
  */
 
 #include <errno.h>

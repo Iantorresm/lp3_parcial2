@@ -1,9 +1,16 @@
 /*
- * Simulacro 1: pedidos prioritarios.
+ * Simulacro 1 - Pedidos prioritarios.
  *
- * Extensión evaluada:
- * algunos pedidos son URGENTES y los cocineros deben tomarlos antes que los
- * pedidos normales, sin busy waiting y respetando capacidad máxima de cola.
+ * Enunciado del simulacro:
+ * algunos pedidos deben clasificarse como URGENTES.
+ *
+ * Modificación requerida:
+ * la cola de pedidos pendientes debe entregar primero los pedidos urgentes a
+ * los cocineros, sin romper la capacidad máxima de la cola y sin usar busy
+ * waiting.
+ *
+ * Concepto evaluado:
+ * sincronización de una cola compartida con prioridad usando mutex y semáforos.
  */
 
 #include <errno.h>

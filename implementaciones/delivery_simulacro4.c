@@ -1,15 +1,18 @@
 /*
- * Simulacro 4: reintento de entrega fallida.
+ * Simulacro 4 - Reintento de entrega fallida.
  *
- * Extensión evaluada:
- * una entrega puede fallar. Si falla, el pedido vuelve a la cola de listos.
- * Luego de MAX_DELIVERY_ATTEMPTS intentos fallidos, el pedido se cancela.
+ * Enunciado del simulacro:
+ * una entrega puede fallar; si falla, el pedido debe volver a la cola de listos
+ * para que un repartidor lo intente nuevamente.
  *
- * Punto importante:
- * main NO manda centinelas a repartidores apenas terminan los cocineros.
- * Primero espera, con un semáforo, que todos los pedidos reales terminen como
- * entregados o cancelados. Si se mandaran centinelas antes, un repartidor podría
- * salir mientras todavía hay pedidos reencolados para reintentar.
+ * Modificación requerida:
+ * agregar un contador de intentos por pedido, reencolar entregas fallidas y
+ * cancelar el pedido cuando alcanza MAX_DELIVERY_ATTEMPTS.
+ *
+ * Concepto evaluado:
+ * reinserción segura en colas concurrentes y coordinación correcta del cierre.
+ * main espera con un semáforo a que todos los pedidos reales terminen como
+ * entregados o cancelados antes de mandar centinelas a los repartidores.
  */
 
 #include <errno.h>

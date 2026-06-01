@@ -1,9 +1,17 @@
 /*
- * Simulacro 5: cierre del restaurante.
+ * Simulacro 5 - Cierre del restaurante.
  *
- * Extensión evaluada:
- * main cierra el restaurante luego de unos segundos. Los productores dejan de
- * generar pedidos nuevos, pero los pedidos ya aceptados terminan su flujo.
+ * Enunciado del simulacro:
+ * después de cierto tiempo, el restaurante deja de aceptar pedidos nuevos.
+ *
+ * Modificación requerida:
+ * agregar un estado compartido de apertura/cierre; los productores deben
+ * consultarlo antes de generar pedidos, pero los pedidos ya aceptados deben
+ * completar preparación y entrega.
+ *
+ * Concepto evaluado:
+ * cierre ordenado del sistema sin perder trabajo ya encolado y sin dejar
+ * threads bloqueados.
  */
 
 #include <errno.h>

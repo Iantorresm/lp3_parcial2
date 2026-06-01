@@ -1,9 +1,15 @@
 /*
- * Simulacro 2: hornallas limitadas.
+ * Simulacro 2 - Hornallas limitadas.
  *
- * Extensión evaluada:
- * hay menos hornallas que cocineros. Cada cocinero debe esperar una hornalla
- * con sem_wait(), preparar el pedido y liberar la hornalla con sem_post().
+ * Enunciado del simulacro:
+ * el restaurante tiene menos hornallas disponibles que cocineros trabajando.
+ *
+ * Modificación requerida:
+ * antes de preparar un pedido, cada cocinero debe esperar una hornalla libre
+ * con sem_wait(); al terminar, debe liberarla con sem_post().
+ *
+ * Concepto evaluado:
+ * uso de semáforos como contador de recursos compartidos limitados.
  */
 
 #include <errno.h>
