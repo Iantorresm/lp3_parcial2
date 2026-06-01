@@ -1,0 +1,59 @@
+# Build directories
+/build/
+/bin/
+/out/
+/cmake-build*/
+
+# Object files
+*.o
+*.obj
+*.lo
+
+# Static / shared libraries
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# Executables
+*.exe
+*.out
+
+# Debug and profiling
+*.pdb
+*.stackdump
+*.dSYM/
+
+# Generated dependency files
+*.d
+
+# Temporary and editor files
+*~
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+*.gcda
+*.gcno
+
+# CMake generated
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# IDEs and editor folders
+.vscode/
+.idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc
+core
