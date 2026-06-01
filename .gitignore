@@ -51,9 +51,16 @@ cmake_install.cmake
 .idea/
 *.code-workspace
 
+# Ignore compiled binaries in implementaciones
+/implementaciones/aldo
+/implementaciones/vielman
+
 # OS files
 .DS_Store
 Thumbs.db
 
 # Misc
 core
+
+.app
+aldo
